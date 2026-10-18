@@ -1,0 +1,76 @@
+/* RESCUEGRID - modal.css: Match details popup */
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: #14251dcc;
+  display: grid;
+  place-items: center;
+  padding: 18px;
+  z-index: 50;
+}
+
+.modal-card {
+  width: min(560px,100%);
+  max-height: 85vh;
+  overflow: auto;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: 0 24px 80px #10251b44;
+}
+
+.modal-card h2 {
+  margin: 8px 0;
+}
+
+.modal-card .modal-close {
+  float: right;
+  border: 1px solid var(--line);
+  background: #fff;
+  border-radius: 9px;
+  padding: 7px 11px;
+  color: var(--green);
+}
+
+.match-reason {
+  background: var(--mint);
+  border: 1px solid var(--line);
+  padding: 12px;
+  border-radius: 12px;
+  color: var(--ink);
+  font-size: 12px;
+  margin: 14px 0;
+}
+
+.match-detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.match-detail-grid>div {
+  padding: 12px;
+  background: #f7faf7;
+  border-radius: 12px;
+}
+
+.match-detail-grid small {
+  display: block;
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+
+.match-detail-grid strong {
+  font-size: 13px;
+}
+
+@media (max-width:560px) {
+  .match-detail-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .modal-card {
+    padding: 18px;
+  }
+}

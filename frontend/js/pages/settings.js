@@ -1,0 +1,6 @@
+// RESCUEGRID - pages/settings.js: Settings page
+// Contains: settings, saveSettings
+
+function settings(){return `${header()}<div class="app">${sidebar()}<main class="main">${pageHead('Settings','Manage your profile and dashboard preferences.')}<section class="panel"><h3>Profile settings</h3><form onsubmit="saveSettings(event)"><label class="field"><span>Display name</span><input id="displayname" value="${state.user}" required></label><label class="field"><span>Role</span><select><option>Donor / Coordinator</option><option>Recipient organization</option><option>Administrator</option></select></label><label class="field"><span>Email notifications</span><select><option>Important updates</option><option>All activity</option><option>Off</option></select></label><button class="btn gold" type="submit">Save changes</button></form></section><section class="panel"><h3>Account</h3><p class="muted">This frontend demo stores changes only for the current browser session. Authentication and database storage are not connected.</p>${btn('Sign out',`go('home')`,'secondary')}</section></main></div>${mobileNav()}`}
+
+function saveSettings(e){e.preventDefault();state.user=document.getElementById('displayname').value.trim();render();toast('Profile preferences updated for this demo.')}

@@ -1,0 +1,50 @@
+/* RESCUEGRID - donate.css: Donate form grid, step bar, category chips */
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 16px;
+}
+
+.steps {
+  display: flex;
+  gap: 8px;
+  margin: 18px 0 24px;
+}
+
+.step {
+  flex: 1;
+  padding: 10px;
+  border-radius: 10px;
+  background: #f2f6f2;
+  color: var(--muted);
+  font-size: 11px;
+  text-align: center;
+}
+
+.step.active {
+  background: var(--green2);
+  color: var(--green);
+  font-weight: 800;
+}
+
+.category-list {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.chip {
+  border: 1px solid var(--line);
+  background: white;
+  border-radius: 99px;
+  padding: 8px 12px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.chip.active {
+  background: var(--green2);
+  color: var(--green);
+  border-color: #a7d3b4;
+}

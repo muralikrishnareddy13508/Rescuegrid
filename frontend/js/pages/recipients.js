@@ -1,0 +1,4 @@
+// RESCUEGRID - pages/recipients.js: Recipients page
+// Contains: recipients
+
+function recipients(){let rs=demoRecipients;return `${header()}<div class="app">${sidebar()}<main class="main">${pageHead('Recipient network','Fictional organizations that demonstrate how matching works.')}<section class="panel"><div class="panel-head"><h3>Demo recipient organizations (fictional)</h3><input class="search" placeholder="Search recipients…" oninput="filterGeneric(this.value,'recipient-list')"></div><div class="feature-grid" id="recipient-list">${rs.map(r=>`<article class="feature recipient-item" data-search="${(r[0]+' '+r[1]).toLowerCase()}"><div class="feature-icon">${r[3]}</div><h3>${r[0]}</h3><p>${r[1]}</p><p style="margin:12px 0"><span class="pill blue">${r[2]} away</span></p>${btn('View needs',`toast('${r[0]}: accepting cooked meals, produce, and packaged food.')`,'secondary small')}</article>`).join('')}</div></section></main></div>${mobileNav()}`}

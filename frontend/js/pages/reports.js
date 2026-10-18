@@ -1,0 +1,6 @@
+// RESCUEGRID - pages/reports.js: Reports page and CSV export
+// Contains: reports, exportCSV
+
+function reports(){return `${header()}<div class="app">${sidebar()}<main class="main">${pageHead('Reports','Review donation history and export a simple report.')}<section class="panel"><div class="panel-head"><h3>Donation report</h3>${btn('Export CSV ↓',`exportCSV()`,'gold small')}</div><div class="table-wrap"><table><thead><tr><th>Food</th><th>Quantity</th><th>Recipient</th><th>Match score</th><th>Status</th></tr></thead><tbody>${state.donations.map(d=>`<tr><td>${d.emoji} ${d.food}</td><td>${d.qty}</td><td>${d.recipient||'—'}</td><td>${d.score==null?'—':d.score+'%'}</td><td><span class="pill">${d.status}</span></td></tr>`).join('')}</tbody></table></div></section></main></div>${mobileNav()}`}
+
+function exportCSV(){let rows=[['Food','Quantity','Recipient','Distance','Match score','Status'],...state.donations.map(d=>[d.food,d.qty,d.recipient||'',d.distance,d.score==null?'':d.score+'%',d.status])];let csv=rows.map(r=>r.map(v=>'"'+String(v).replaceAll('"','""')+'"').join(',')).join('\n');let a=document.createElement('a');a.href=URL.createObjectURL(new Blob([csv],{type:'text/csv'}));a.download='rescuegrid-report.csv';a.click();URL.revokeObjectURL(a.href);toast('Report exported.')}

@@ -1,0 +1,90 @@
+/* RESCUEGRID - charts.css: Match score bar, bar chart, donut, legend */
+
+.match-score {
+  height: 8px;
+  width: 75px;
+  background: #edf2ed;
+  border-radius: 99px;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.match-score i {
+  display: block;
+  height: 100%;
+  background: #4c9c73;
+  border-radius: 99px;
+}
+
+.chart {
+  height: 185px;
+  display: flex;
+  align-items: end;
+  gap: 12px;
+  padding: 12px 10px 25px;
+  border-bottom: 1px solid var(--line);
+  background: repeating-linear-gradient(to bottom,transparent 0 43px,#edf2ed 44px 45px);
+}
+
+.bar {
+  flex: 1;
+  min-width: 12px;
+  border-radius: 7px 7px 0 0;
+  background: linear-gradient(#74b98b,#2c7958);
+  position: relative;
+}
+
+.bar:after {
+  content: attr(data-label);
+  position: absolute;
+  bottom: -23px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 10px;
+  color: var(--muted);
+}
+
+.donut-wrap {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.donut {
+  width: 135px;
+  height: 135px;
+  border-radius: 50%;
+  background: conic-gradient(#2b7656 0 42%,#76b8a0 42% 68%,#e7b95f 68% 84%,#e98c73 84% 92%,#b8c9bd 92%);
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+
+.donut:after {
+  content: attr(data-total);
+  width: 82px;
+  height: 82px;
+  background: #fff;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-weight: 850;
+  font-size: 13px;
+}
+
+.legend {
+  display: grid;
+  gap: 8px;
+  font-size: 11px;
+  color: var(--muted);
+}
+
+.legend span:before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 3px;
+  background: var(--dot, var(--green));
+  margin-right: 7px;
+}

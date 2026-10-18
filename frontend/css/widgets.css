@@ -1,0 +1,154 @@
+/* RESCUEGRID - widgets.css: Activity list, map card, tables, pills */
+
+.activity-list {
+  display: grid;
+  gap: 14px;
+}
+
+.activity {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.activity-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 12px;
+  background: var(--mint);
+  display: grid;
+  place-items: center;
+}
+
+.activity strong {
+  display: block;
+  font-size: 12px;
+}
+
+.activity small {
+  color: var(--muted);
+}
+
+.map-card {
+  height: 245px;
+  border-radius: 13px;
+  background-color: #e5f2e7;
+  background-image: linear-gradient(30deg,transparent 48%,#bddcc7 49%,#bddcc7 51%,transparent 52%),linear-gradient(120deg,transparent 48%,#c7e2d0 49%,#c7e2d0 51%,transparent 52%);
+  background-size: 65px 54px;
+  position: relative;
+  overflow: hidden;
+}
+
+.map-card:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 20% 30%,#fff9 0 2px,transparent 3px),radial-gradient(circle at 60% 70%,#fff9 0 2px,transparent 3px);
+  background-size: 36px 36px;
+}
+
+.pin {
+  position: absolute;
+  border: 3px solid white;
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(-45deg);
+  width: 22px;
+  height: 22px;
+  background: var(--green);
+  box-shadow: 0 3px 7px #1d563522;
+}
+
+.pin:after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: #fff;
+  border-radius: 50%;
+  top: 5px;
+  left: 5px;
+}
+
+.pin.p1 {
+  top: 24%;
+  left: 28%;
+}
+
+.pin.p2 {
+  top: 60%;
+  left: 58%;
+  background: #e9aa43;
+}
+
+.pin.p3 {
+  top: 40%;
+  left: 78%;
+  background: #5d9cb1;
+}
+
+.pin.p4 {
+  top: 72%;
+  left: 24%;
+  background: #e58e73;
+}
+
+.table-wrap {
+  overflow: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  white-space: nowrap;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 12px 10px;
+  border-bottom: 1px solid #edf2ed;
+  font-size: 12px;
+}
+
+th {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: var(--muted);
+}
+
+.pill {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 99px;
+  background: var(--green2);
+  color: var(--green);
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.pill.amber {
+  background: #fff0cf;
+  color: #8b6418;
+}
+
+.pill.blue {
+  background: var(--blue);
+  color: #376f80;
+}
+
+.row-food {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.food-thumb {
+  width: 35px;
+  height: 35px;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  background: #f7eddb;
+  font-size: 20px;
+}

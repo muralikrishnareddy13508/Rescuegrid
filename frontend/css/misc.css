@@ -1,0 +1,54 @@
+/* RESCUEGRID - misc.css: Chat bubbles (currently unused), mobile nav base, empty state, toast */
+
+.chat {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.bubble {
+  padding: 13px 15px;
+  border-radius: 15px;
+  background: #f1f7f2;
+  max-width: 90%;
+  font-size: 13px;
+}
+
+.bubble.user {
+  background: var(--green);
+  color: white;
+  align-self: flex-end;
+}
+
+.chat-form {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.chat-form input {
+  flex: 1;
+  min-width: 0;
+}
+
+.mobile-nav {
+  display: none;
+}
+
+.empty {
+  padding: 35px;
+  text-align: center;
+  color: var(--muted);
+}
+
+.toast {
+  position: fixed;
+  bottom: 22px;
+  right: 22px;
+  background: #20352e;
+  color: white;
+  padding: 13px 18px;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  z-index: 30;
+}

@@ -1,0 +1,58 @@
+/* RESCUEGRID - header.css: Top bar: brand, logo, navigation */
+
+.topbar {
+  height: 72px;
+  background: #fff;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5vw;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  font-weight: 850;
+  letter-spacing: .04em;
+}
+
+.logo {
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+}
+
+.brand small {
+  display: block;
+  font-size: 9px;
+  color: var(--muted);
+  letter-spacing: .13em;
+  font-weight: 650;
+}
+
+.nav {
+  display: flex;
+  gap: 26px;
+  align-items: center;
+  color: #607269;
+  font-size: 13px;
+}
+
+.nav a:hover {
+  color: var(--green);
+}
+
+.demo-banner {
+  background: #fff4d6;
+  color: #6d5316;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 7px 12px;
+  border-bottom: 1px solid #f0dca6;
+}
